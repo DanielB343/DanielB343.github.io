@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Porject
+   
+   Home Page of the Catter Breeds website
+   Author: Daniel Baker
+   Date:   10/25/2023
+   
+   Filename: cb_home.html
+   -->
+   <!-- Meta data and css links-->
+   <title>Cat"ter" Breeds</title>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link href="cb_reset.css" rel="stylesheet" />
+   <link href="cb_styles1.css" rel="stylesheet" />
+   <link href="cb_timerstyles.css" rel="stylesheet" />
+   <script src="cb_script.js" defer></script>
+</head>
+
+<body>
+<!-- The header of the page inculdes a menu and a logo-->
+   <header>
+      <img src="cb_logo.png" alt="Catter Breeds" />
+      
+      <nav class="horizontal">
+         <ul class="mainmenu">	
+			<li><a href="cb_home.html">Home</a></li>
+			<li><a href="cb_geninfo.html">General Cat Info</a></li>
+            <li><a href="#" class="submenuTitle">Cat Breeds</a>
+               <ul class="submenu">
+                  <li><a href="cb_bengal.html">Bengal</a></li>
+                  <li><a href="#">Burmese</a></li>
+				  <li><a href="#">Egyptain Mau</a></li>
+				  <li><a href="#">Japanese Bobtail</a></li>
+                  <li><a href="#">La Perm</a></li>
+                  <li><a href="#">Munchkin</a></li>
+				  <li><a href="#">Persian</a></li>   
+                  <li><a href="#">Pixiebob</a></li>
+				  <li><a href="#">Ragdoll</a></li>  
+                  <li><a href="#">Siamese</a></li>
+                  <li><a href="#">Sphynx</a></li>				  
+               </ul> 
+			</li>
+            <li><a href="#">History</a></li>
+            <li><a href="cb_catsurvey.html">Cat Survey</a> </li>
+           </ul>
+           
+      </nav>
+	  <!-- Adds a place holder clock that will be replace with the current date and time by the script file-->
+	  <div id="timeHeading">Current Time:</div>
+	  <div id="dateToday">11/8/2021<br />2:45:12 p.m.</div>
+	  
+	  <!-- Adds a place holder countdown that will be ticking down when the next updates comes out for the website-->
+	   <div id="updateHeading">Until Next Update:</div>
+	  <div id="countdown">
+            <div><span id="days">53</span><br />Days</div>
+            <div><span id="hrs">9</span><br />Hours</div>
+            <div><span id="mins">14</span><br />Minutes</div>
+            <div><span id="secs">48</span><br />Seconds</div>
+         </div>
+	  
+   </header>
+   <!-- The main body of the page incudes one pic in the mid and an about us with some fun tips facts and quotes-->
+   <section>
+      
+      <img src="cb_photo1.png" alt="" />
+      <article>
+	     <h1>About Us</h1>
+         <p>We at <cite>Catter Breeds</cite> are here to provide all the information you need
+		    about different types of cat breeds and the best way to take care of them. We've treated 
+            all these cat breeds with love and care by giving each page all the proper detail it needs.
+			Our main goal at <cite>Catter Breeds</cite> is to Provide easy-to-access information about
+			every cat breed which we are working hard to achieve that.
+         </p>
+         <p>You can find all the information including breed personalities, fur coat,
+		    origin, and body type. We also have many tips on best to take care of these breeds
+            like the best to groom their fur or what type of interaction should you give your cat.
+         </p>
+         <p>Call <a href="tel:+16785557893">(678) 555-7893</a> to ask for tips or information 
+		 about any cat breeds you may have questions about.
+         </p>
+      </article>
+      
+      <aside>
+	       <h1> Cat quotes of the day! </h1>
+		   <!-- has chracter references of dashes-->
+         <blockquote>
+            <p>“Owners of dogs will have noticed that, if you provide them with food
+			and water and shelter and affection, they will think you are God. Whereas
+			owners of cats are compelled to realize that, if you provide them with food
+			and water and affection, they draw the conclusion that they are God.”</p>
+            <p>&mdash; Mark T.</p>
+         </blockquote>
+		 <blockquote>
+            <p>"If animals could speak, the dog would be a blundering outspoken fellow; 
+			but the cat would have the rare grace of never saying a word too much."</p>
+            <p>&mdash; Christopher H.</p>
+         </blockquote>
+		    <h2> Cat facts of the day! </h2>
+         <blockquote>
+            <p>The loudest cat may very well be the Siamese,
+			who is known for having a meow that very closely 
+			resembles the cries of a human baby.</p>
+         </blockquote>
+		 <blockquote>
+            <p>Sphynx cats distinguish themselves from other felines by their hairless coat. 
+			However, some of them are covered by peach fuzz, but it’s barely noticeable.</p>
+         </blockquote>
+		  <h3> Cat tips of the day! </h3>
+		  <blockquote>
+            <p>The most important thing to remember is cat express
+			their feeling with body language. Try to read and remember it
+			to understand better how your cat feels.</p>
+		  </blockquote>
+		  <blockquote>
+            <p>The Best way to boost your relationship with your 
+			cat is to do short cat training sessions with it.
+			This builds a bond with your cat keeping it form 
+			being too bored. It also has the benefit of making
+			your cat behave more often.</p>
+		  </blockquote>
+      </aside>
+   </section>
+   <!-- A footer that uses a fake address of where this company is at
+	  Has character reference for a dot  -->
+   <footer>
+      Catter Breeds &#8226; 4105 Durham Road, Monroe NC
+   </footer>
+</body>
+</html>
