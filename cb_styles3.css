@@ -1,0 +1,281 @@
+@charset "utf-8";
+/* Special font use for the main heading */
+@font-face {
+	font-family: Champagne;
+	src: url(cac_champagne.woff) format('woff'),
+	     url(cac_champagne.ttf) format('ttf');
+}
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Project
+   
+   Author:   Daniel Baker
+   Date:     10/28/2023
+   
+   Typography and Color Styles for pc_about.html
+   
+   Filename: cb_styles3.css
+
+   This file contains the layout styles used in the Catter Breeds
+   bengal page.
+*/
+
+/* HTML and Body Styles */
+
+html {
+   background: url(cb_back1.png) center center / cover no-repeat fixed;
+   height: 100%;
+   font-family: Verdana, Geneva, sans-serif;
+   font-size: 12px;
+}
+
+body {
+   background: rgb(225, 225, 220);   
+   box-shadow: rgb(51, 51, 51) 5px 0px 15px,
+               rgb(51, 51, 51) -5px 0px 15px;
+   margin: 0px auto;
+   min-height: 100%;
+   min-width: 320px;
+   max-width: 1024px;
+   width: 100%; 
+}
+
+/* Page Header Styles */
+body > header {
+   background: rgb(225, 225, 220); 
+}
+
+body header img {
+   display: block;
+   width: 100%;
+}
+
+/* Horizonal Navigation Styles */
+
+nav.horizontal {
+   background-color: rgb(58, 58, 58);
+   min-height: 2em;
+}
+
+nav.horizontal li {
+   color: rgb(225, 225, 225);
+   display: block;
+   line-height: 2em;
+   text-transform: uppercase;
+}
+
+nav.horizontal a {
+   display: block;
+   font-size: 1em;
+}
+
+nav.horizontal a:visited, nav.horizontal a:link {
+   color: rgb(225, 225, 225);
+}
+
+nav.horizontal a:hover, nav.horizontal a:active {
+   background-color: rgb(91, 58, 47);
+   color: orange;
+}
+
+/* Main Menu Styles */
+
+ul.mainmenu {
+   display: block;
+}
+
+ul.mainmenu > li {
+   text-indent: 15px;
+}
+
+ul.mainmenu > li:first-of-type a {
+   color: orange;
+   background-color: rgb(91, 58, 47);
+}
+
+/* Submenu Styles */
+
+ul.submenu {
+   width: 100%;
+   background-color: rgb(58, 58, 58);
+}
+
+/* Pulldown Menu Styles */
+
+ul.submenu {
+   display: none;
+}
+
+a.submenuTitle:hover+ul.submenu, ul.submenu:hover {
+	display: block;
+}
+
+/* Heading Styles */
+
+h1 {
+   text-indent: 1em;
+}
+
+body > header h1 {
+   font-size: 2.4em;
+   line-height: 2.4em;
+   font-family: Champagne, cursive;
+   letter-spacing: 0.3em;
+   text-align: center;
+   font-weight: normal;
+   color: rgb(90, 90, 90);
+}
+
+body > article > h1, body > section > h1, body > aside > h1, body > section > article > h1 {
+   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+   padding: 0.5em 0;
+}
+
+body > article > h1, body > section > h1, body > aside > h1 {
+   font-size: 1.3em;
+   background-color: rgb(10, 10, 10);
+   color: white;
+}
+
+
+section > article > h1 {
+   font-size: 1.1em;
+}
+
+
+/* Paragraph Styles */
+
+p {
+   margin: 1em;
+   font-size: 1.2em;
+}
+
+/* Left Column Styles */
+
+img {
+   width: 100%;
+   display: block;
+}
+
+
+/* Right Column Styles */
+
+aside {
+   background-color: rgb(222, 184, 135);
+   padding-bottom: 2em;
+}
+
+
+aside > h1 {
+   text-align: center;
+   background-color: rgb(31, 31, 31);
+   color: rgb(201, 201, 201);
+}
+
+aside > img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 5px;
+	width: 58%
+}
+/* Footer Styles */
+
+footer {
+   background-color: rgb(222, 161, 95);
+   font-size: 0.9em;
+   padding: 1em 0;
+   text-align: center;
+}
+
+/* New Styles Added Below */
+
+/* ==============================
+   Mobile Styles: 0px to 480px
+   ===============================
+*/
+
+@media only screen and (max-width: 480px) {
+
+   nav.horizontal a {
+	  font-size: 1.5em;
+	  line-height: 2.2em;
+   }
+
+   aside {
+	  display: none;
+   }
+}
+
+/* ================================
+   Tablet Styles: 481px and greater
+   ================================
+*/
+@media only screen and (min-width: 481px) {
+
+   ul.mainmenu > li {
+	  float: left;
+	  position: relative;
+	  width: 20%;
+   }
+   
+   ul.submenu {
+	  box-shadow: rgb(51, 51, 51) 5px 5px 15px;
+	  position: absolute;
+	  width: 200%;
+   }
+}
+
+/* =================================
+   Desktop Styles: 769px and greater
+   =================================
+*/
+@media only screen and (min-width: 769px) {
+
+   ul.submenu {
+	   box-shadow: rgb(51, 51, 51) 5px 5px 15px;
+	   position: absolute;
+	   width: 100%;
+   }
+   
+   nav.horizontal::after {
+	   clear: both;
+	   content: "";
+	   display: table;
+   }
+   
+   
+     /* Grid layout only for desktop */  
+   body {
+	display: grid;
+	grid-template-columns: 59% 40%;
+	grid-template-areas: "header  header"
+	                     "intro    faq"
+						 "articles faq"
+						 "footer   footer";
+	grid-column-gap: 1%;
+}
+body > header {
+	grid-row: 1;
+	grid-column: 1/-1;
+}
+
+body > article {grid-area: intro;}
+body > aside {grid-area: faq}
+
+body > Section {grid-area: articles;}
+body > footer {grid-area: footer;}
+}
+
+/* Grid Styles for Nested Grid */
+
+section {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+section > h1 {
+	grid-area: 1/1/2/3;
+}
+

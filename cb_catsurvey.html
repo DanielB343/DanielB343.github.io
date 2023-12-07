@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      New Perspectives on HTML5 and CSS3, 8th Edition
+       Porject
+   
+   The Cat survey page 
+   Author: Daniel Baker
+   Date:   12/6/2023
+   
+   Filename: cb_catsurvey.html
+
+   -->
+   
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>Cat Survey</title>
+   <link href="cb_reset.css" rel="stylesheet" />
+   <link href="cb_styles4.css" rel="stylesheet" />
+   <link href="cb_surveyforms.css" rel="stylesheet" />
+   <script src="cb_surveysubmit.js"></script>
+</head>
+
+<body>
+   <header>
+     <!-- The header of the page inculdes a menu and a logo-->
+   <header>
+      <img src="cb_logo.png" alt="Catter Breeds" />
+      
+      <nav class="horizontal">
+         <ul class="mainmenu">	
+			<li><a href="cb_home.html">Home</a></li>
+			<li><a href="cb_geninfo.html">General Cat Info</a></li>
+            <li><a href="#" class="submenuTitle">Cat Breeds</a>
+               <ul class="submenu">
+                  <li><a href="cb_bengal.html">Bengal</a></li>
+                  <li><a href="#">Burmese</a></li>
+				  <li><a href="#">Egyptain Mau</a></li>
+				  <li><a href="#">Japanese Bobtail</a></li>
+                  <li><a href="#">La Perm</a></li>
+                  <li><a href="#">Munchkin</a></li>
+				  <li><a href="#">Persian</a></li>   
+                  <li><a href="#">Pixiebob</a></li>
+				  <li><a href="#">Ragdoll</a></li>  
+                  <li><a href="#">Siamese</a></li>
+                  <li><a href="#">Sphynx</a></li>				  
+               </ul> 
+			</li>
+            <li><a href="#">History</a></li>
+            <li><a href="cb_catsurvey.html">Cat Survey</a> </li>
+           </ul>          
+      </nav>
+   </header>
+   <section>
+   <!-- Text about what on this survey along with some important infomation-->
+      <h1>Tell us about your cat!</h1>
+      <p>This survey is  will give us infomation of different cats
+	  snice no cat is the same no matter what they are. These survay 
+	  will help give examples of different breds whioch can help
+	  each of their pages. There an option to even let you cat
+	  be meation in the website if you want your cat to be show to everyone.</p>
+      <p>These surveys are maily for reserch purposes so they
+	     will be private and confidential. Us at catterbreeds 
+		 will not share any of your information with any third 
+         parties.</p>
+      <p>Required values are marked by an asterisk (*)</p>
+      <!-- Makes the form of the cat survey-->
+     <form id="survey" action="http://www.example.com/Catterbreeds/survey" method="post">
+	 <!-- The frist field set which is about the user and cat infomation-->
+	    <fieldset id="custInfo">
+		   <legend>User/Cat Infomation</legend>
+		   <!-- This feild uses the text input type for inputing the name-->
+		   <!-- The Name field is 1 of 4 fields that are required -->
+		 <div class="formRow">
+		   <label for="name">Name*</label>
+		   <input name="userName" id="name" type="text" placeholder="first and last name" required />
+		 </div>  
+		 <!-- This field us a different mobile keyboard being for the email-->
+		 <!-- The E-mail field is 1 of 4 fields that are required -->
+		 <!-- The E-mail field has a pattern that makes sure you inputing like an actual emial. -->
+		 <div class="formRow">		 
+		   <label for="mail">E-mail*</label>
+		   <input name="usermail" id="mail" type="email" placeholder="Name@web.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required />
+		 </div> 
+          <!-- The Cat's name field is 1 of 4 fields that are required -->
+		  <!-- The Cat's name field has a max length of 20 so you can go benyon 20 chracters -->
+		 <div class="formRow">
+		   <label for="cname">Cat's name*<br />
+		   (Can only be 20 chracters long)</label>
+		   <input name="catname" id="cname" type="text" maxlength="20" placeholder="Cat name" required />
+		 </div> 
+		 <!-- This field uses the input type of radio to pick btween the two genders of a cat -->
+		 <div class="formRow">		 
+		   <label>Gender</label>
+		   <fieldset class="optGroup">
+		      <label for="fBoy">Boy</label>
+			  <input name="cGender" id="fBoy" value="boy" type="radio" />
+			  <label for="fGirl">Girl</label>
+			  <input name="cGender" id="fGirl" value="girl" type="radio" />
+		   </fieldset>
+		</div> 
+       <!-- This field uses a spinner to let the user pick a number btween 0 to 38 for the cat's age. -->
+	   <!-- Fun Fact: The longest living cat was 38 years. -->
+		<div class="formRow">
+		   <label for="ageSpin">Age</label>
+		   <input name="CatAge" id="ageSpin"  type="number" value="1" step="1" min="0" max="38" />
+		</div>
+		
+		 <div class="formRow">
+		   <label for="adopt">Area of adoption</label>
+		   <input name="catadopt" id="adopt" type="text"  />
+		 </div>
+		 <!-- This field uses the date input type which gives users a calendar to pick date from-->
+		 <div class="formRow">		 
+		   <label for="adoptD">Date of adoption</label>
+		   <input name="adoptionDate" id="adoptD" type="date" />
+		</div>
+		<!-- This field uses a selection list of 10 to user have as much option as they can when picking thier color-->
+		 <div class="formRow">		 
+		   <label for="color">Cat Color</label>
+		   <select name="CatColor" id="color" size="10" >
+		      <option value="calico">Calico</option>
+			  <option value="black">Black</option>
+			  <option value="fawn">Fawn</option>
+			  <option value="cinnamon">Cinnamon</option>
+			  <option value="tabby">Tabby</option>
+			  <option value="chocolate">Chocolate</option>
+			  <option value="liac">Liac</option>
+			  <option value="cream">Cream</option>
+			  <option value="smoke">Smoke</option>
+			  <option value="other">Other</option>
+		   </select>
+		</div> 
+		<!-- This field was added just in case we didn't have a certain color on the selection list-->
+         <div class="formRow">		 
+		   <label for="otherC">If pick other then input what color your cat is. <br />
+		   (If not then leave blank)</label>
+		   <input name="colorOther" id="otherC" type="text"  />
+		 </div> 
+		 
+		<!-- This field uses a data list that give suggested of breeds which save a little time typing it in, but if their brred is not on the list they simply just type it in-->
+		<!-- The Cat breed field is 1 of 4 fields that are required -->
+		<div class="formRow">		 
+		   <label for="breed">Cat Breed* <br />
+		   (If not on the data list, just type it in)</label>
+		   <input name="catBreed" id="breed" type="text" list="breedType" required />
+		   <datalist id="breedType">
+		      <option value="Bengal">
+			  <option value="Burmese">
+			  <option value="Egyptain Mau">
+			  <option value="Japanese Bobtail">
+			  <option value="La Perm">
+			  <option value="Munchkin">
+			  <option value="Persian">
+			  <option value="Pixiebob">
+			  <option value="Ragdoll">
+			  <option value="Siamese">
+			  <option value="Sphynx">
+		   </datalist>
+		</div> 
+		
+		
+		<!-- This field uses a check box input type which show user gave permission to use their cats for the website-->
+		<input name="catWeb" id="CatCB" value="yes" type="checkbox" />
+		<label for="CatCB">Check this box if you want your cat to be show on the website!</label>
+		
+	    </fieldset>
+		<!-- The second field set which is about the cat experience-->
+		<fieldset id+"expInfo">
+		   <legend>Experiences with your Cat</legend>
+		   
+		<div class="formRow">		 
+		   <label for="personality">What personality would you describe your cat?</label>
+		   <input name="personalityType" id="personality" type="Text" />
+		</div> 
+		
+		<div class="formRow">		 
+		   <label>Is your cat mostly inside or outside?</label>
+		   <fieldset class="optGroup">
+		      <label for="fInside">Inside</label>
+			  <input name="sside" id="fInside" value="inside" type="radio" />
+			  <label for="fOutside">Outside</label>
+			  <input name="sside" id="fOutside" value="outside" type="radio" />
+		   </fieldset>
+		</div> 
+		
+		<div class="formRow">		 
+		   <label>Do they east mostly dry or wet food?</label>
+		   <fieldset class="optGroup">
+		      <label for="cDry">Dry</label>
+			  <input name="ftype" id="cDry" value="dry" type="radio" />
+			  <label for="cWet">Wet</label>
+			  <input name="ftype" id="cWet" value="wet" type="radio" />
+		   </fieldset>
+		</div> 
+		
+		<div class="formRow">		 
+		   <label>Does your cat like new people?</label>
+		   <fieldset class="optGroup">
+		      <label for="hYes">Yes</label>
+			  <input name="likepeople" id="hYes" value="yes" type="radio" />
+			  <label for="hNo">No</label>
+			  <input name="likepeople" id="hNo" value="no" type="radio" />
+		   </fieldset>
+		</div>
+		
+        <div class="formRow">		 
+		   <label for="Bad">What is the worst thing your cat has done?</label>
+		   <select name="Badtype" id="Bad">
+		      <option value="bad1">Knock over a fragile object</option>
+			  <option value="bad2">Scratch fabric apart</option>
+			  <option value="bad3">Broke into your trash</option>
+			  <option value="bad4">Brought home a dead animal</option>
+			  <option value="bad2">Bitted or scratched someone</option>
+			  <option value="bad3">Made you trip on them</option>
+			  <option value="bad4" selected>None of the above</option>
+		   </select>
+		</div> 
+		<!-- This field uses a range slider to determine the how the users feel about their cat.-->
+       <div class="formRow">
+            <label for="rangeBox">Rate your overall experience with your cat<br />
+              (0=poor; 10=great) </label>
+			0  
+            <input name="catRate" id="rangeBox" type="range" value="5" step="1" min="0" max="10" />		  
+            10
+		</div>
+		
+		<!-- This field is text area to explain any other experiences they had with their cat.-->
+       <label for="commBox">Tell us more about your experience with your cat!</label>
+	   <textarea name="catExp' id='commbox"></textarea>
+	   
+	    </fieldset>
+		<!-- Adds a submin and cancal button at the bottom with will submint or reset the survey..-->
+		<div id="buttons">
+		   <input type="submit" value="Submit My Survey" />
+		   <input type="reset" value="Cancel" />
+		</div>		
+	 </form>
+	 
+   </section>
+   <footer>
+      Catter Breeds &#8226; 4105 Durham Road, Monroe NC
+   </footer>
+</body>
+</html>

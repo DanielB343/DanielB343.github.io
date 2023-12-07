@@ -1,0 +1,96 @@
+/*
+  New Perspectives on HTML5 and CSS3, 8th Edition
+  Project
+   
+   Author:   Daniel Baker
+   Date:     12/6/2023
+   
+   Filename: cb_surveyforms.css
+   
+   This file contains the form and fieldset styles used in the Catter Breeds
+   Survey page.
+
+*/
+
+/* Form Layout Styles */
+
+form#survey {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+form#survey > fieldset {
+	background-color: rgb(241, 232, 181);
+	border-radius: 20px;
+	flex: 1 1 300px;
+	font-size: 0.85em;
+	padding: 10px;
+	margin: 10px;
+}
+
+
+div.formRow {
+	display: flex;
+	flex-flow: row wrap;
+    margin: 7px 0px;
+}
+
+div.formRow > * {
+	flex: 1 1 150px;
+}
+
+/* Legend Styles */
+
+legend {
+	background-color: rgb(1, 1, 1);
+	color: white;
+	padding: 5px;
+}
+
+/* Text Area Styles */
+
+textarea {
+	margin-top: 10px;
+	height: 100px;
+	width: 95%;
+}
+
+/* Spinner Styles */
+
+div.formRow > input#ageSpin {
+	flex: 0 0 100px;
+}
+
+/* Form Button Styles */
+
+div#buttons {
+	text-align: center;
+	width: 100%;
+}
+
+input[type='submit'], input[type='reset'] {
+	font-size: 1.2em;
+	padding: 5px;
+	margin: 15px;
+}
+
+/* Validation Styles */
+
+input:focus, select:focus, textarea:focus {
+	background-color: rgb(220, 225, 220);
+}
+/* Shows in the website that these 4 fields are vaid by giving them a shade of green while gfivng a shade of red if they are invaild */
+
+input#name:focus:valid,
+input#cname:focus:valid,
+input#breed:focus:valid,
+input#mail:focus:valid {
+	background-color: rgb(220, 255, 220);
+}
+
+input#name:focus:invalid,
+input#cname:focus:invalid,
+input#breed:focus:invalid,
+input#mail:focus:invalid {
+	background-color: rgb(255, 232, 233); 
+}
